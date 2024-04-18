@@ -1,0 +1,57 @@
+* {
+ padding: 0px;
+ margin: 0px;
+ box-sizing: border-box;
+}
+.navbar {
+ background-color: rgb(50, 47, 47);
+ color: white;
+ padding: 10px;
+}
+.navbar ul {
+ display: flex;
+ width: 100%;
+ margin: 0px auto;
+ font-size: 14px;
+ list-style: none;
+}
+.navbar ul li {
+ margin: 10px;
+}
+.App {
+ background: rgb(29, 41, 84);
+ height: 100vh;
+}
+.container {
+ width: 100%;
+ margin: 0px auto;
+}
+.container .blog {
+ display: flex;
+ padding: 10px;
+}
+.container .card {
+ background-color: white;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 4px;
+ width: 50%;
+ font-size: 10px;
+ color: rgb(50, 47, 47);
+}
+.container .card img {
+ width: 100%;
+}
+.container .game {
+display: flex;
+padding: 10px;
+overflow: hidden;
+}
+.container .game img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.container .game h2 {
+  color: white;
+}
+
