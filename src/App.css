@@ -44,14 +44,15 @@
 }
 .container .game {
 display: flex;
-padding: 10px;
-overflow: hidden;
+justify-content: center;
+align-items: center;
 }
-.container .game img {
-  width: 100% !important;
-  height: 100% !important;
+.container .game .image-container {
+  width: 300px;
+  margin: 0 auto;
 }
 .container .game h2 {
   color: white;
+  text-align: center;
 }
 
