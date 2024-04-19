@@ -1,5 +1,4 @@
 import './App.css'
-import { Blog } from './components/Blog'
 import  Game  from './components/Game'
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
      <li>Game</li>
     </ul>
    </div>
-    <Blog />
     <Game />	
   </div>
  )
