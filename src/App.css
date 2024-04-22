@@ -31,22 +31,6 @@
   color: white;
   text-align: center;
 }  
-.container .game .image-container {
-  width: fit-content;	
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  border: 5px solid white;
-}
-.container .game  h1, h2, h3 {
-  color: white;
-  text-align: center;
-}
-.container  .game p {
-  color: white;
-  text-align: center;
-}
 .ping-pong-container {
   position: relative;
   width: 600px;
@@ -109,4 +93,22 @@ button {
 .leaderboard-container h1 {
   color: white;
   text-align: center;
-}  
+} 
+.table-container {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 8px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.table th {
+  background-color: #f2f2f2;
+}
+

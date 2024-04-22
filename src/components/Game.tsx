@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, KeyboardEvent } from 'react';
 
 const Game: React.FC = () => {
 const initialBallState = { x: 300, y: 200, speedX: 5, speedY: 5 };
@@ -11,7 +11,7 @@ const initialBallState = { x: 300, y: 200, speedX: 5, speedY: 5 };
  
   useEffect(() => {
     if (gameRunning) {
-      const handleKeyPress = (e) => {
+      const handleKeyPress = (e: KeyboardEvent) => {
         switch (e.key) {
           case 'ArrowUp':
             setPaddles((prev) => ({ ...prev, right: Math.max(prev.right - 10, 0) }));
@@ -37,9 +37,12 @@ const initialBallState = { x: 300, y: 200, speedX: 5, speedY: 5 };
           y: 200,
         }));
  
-        const ballRect = ballRef.current.getBoundingClientRect();
-        const paddleLeftRect = document.getElementById('paddle-left').getBoundingClientRect();
-        const paddleRightRect = document.getElementById('paddle-right').getBoundingClientRect();
+        const ballRect = (ballRef.current as unknown as Element)?.getBoundingClientRect();
+        const paddleLeftElement = document.getElementById('paddle-left');
+        const paddleRightElement = document.getElementById('paddle-right');
+	if (paddleLeftElement && paddleRightElement) {
+	const paddleLeftRect = paddleLeftElement.getBoundingClientRect();
+	const paddleRightRect = paddleRightElement.getBoundingClientRect();
  
         // Check for collisions with paddles
         if (
@@ -65,14 +68,15 @@ const initialBallState = { x: 300, y: 200, speedX: 5, speedY: 5 };
           setGameOver(true);
           pauseGame();
         }
+      }
       };
       const intervalId = setInterval(updateGame, 50);
  
-      window.addEventListener('keydown', handleKeyPress);
+      window.addEventListener('keydown', handleKeyPress as unknown as EventListener);
  
       return () => {
         clearInterval(intervalId);
-        window.removeEventListener('keydown', handleKeyPress);
+        window.removeEventListener('keydown', handleKeyPress as unknown as EventListener);
       };
     }
   }, [gameRunning]);
@@ -94,7 +98,7 @@ const initialBallState = { x: 300, y: 200, speedX: 5, speedY: 5 };
   return (
    <div className="container">
 	<h1>Welcome to ping pong!</h1>
-    <div className="ping-pong-container" tabIndex="0">
+    <div className="ping-pong-container" tabIndex={0}>
       <div
         className={`paddle paddle-left ${gameRunning ? '' : 'paused'}`}
         id="paddle-left"
