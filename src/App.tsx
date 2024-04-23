@@ -7,11 +7,11 @@ const App: React.FC = () => {
     let results: Array<Result> = [];
     
     let result: Result [] = [
-    {id: "1", name: "Jack", score:"8"},
-    {id: "2", name: "Jill", score:"3"},
-    {id: "3", name: "Polly", score: "10"},
-    {id: "4", name: "Mary", score: "5"},
-    {id: "5", name: "Tom", score: "7"},		
+    {id: "1", name: "Jack", wins:"8"},
+    {id: "2", name: "Jill", wins:"3"},
+    {id: "3", name: "Polly", wins: "10"},
+    {id: "4", name: "Mary", wins: "5"},
+    {id: "5", name: "Tom", wins: "7"},		
 ];
 
     results.push(...result);
@@ -22,6 +22,7 @@ const App: React.FC = () => {
     <ul>
      <li>Home</li>
      <li>Game</li>
+     <li>Chat</li>	
     </ul>
    </div>
     <Game />

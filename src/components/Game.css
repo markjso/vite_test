@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Updated App styles */
+.gameApp {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    background-color: #000000;
+    color: white;
+    left: 30vw;
+    top: 20px;
+  }
+
+.goal-overlay {
+    position: fixed; /* Use fixed positioning to cover the entire view */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Cover the full viewport width */
+    height: 100vh; /* Cover the full viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 10; 
+  }
+.game-area {
+    position: relative;
+    width: 600px; /* Adjust based on your game's design */
+    height: 400px; /* Adjust based on your game's design */
+    /* margin: 20px auto; */
+    background-color: #3a3a3a; /* Light grey background for visibility */
+    border: 2px solid #000; /* Add border to visualize the game area */
+  }
+  
+  .paddle {
+    position: absolute;
+    width: 20px;
+    height: 100px; /* Adjust height as needed */
+    background-color: green; /* Left paddle color */
+  }
+
+  .right-paddle {
+    background-color: red; /* Right paddle color */
+  }
+  
+  .left-paddle {
+    background-color: blue; /* Right paddle color */
+  }
+  
+  .ball {
+    position: absolute;
+    width: 20px; /* Ball size */
+    height: 20px; /* Ball size */
+    border-radius: 50%; /* Make it circular */
+    background-color: rgb(255, 255, 255); /* Ball color */
+  }

@@ -12,7 +12,7 @@ const Leaderboard: React.FC<Props> = (props) => {
     <tr key={result.id}>
       <td>{result.id}</td>
       <td>{result.name}</td>
-      <td>{result.score}</td>
+      <td>{result.wins}</td>
     </tr>
   ));
 
@@ -25,7 +25,7 @@ const Leaderboard: React.FC<Props> = (props) => {
           <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Score</th>
+            <th>Wins</th>
           </tr>
         </thead>
         <tbody>{listItems}</tbody>
